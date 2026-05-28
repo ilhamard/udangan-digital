@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue'
 
 const emit = defineEmits(['open'])
 
-const guestName = ref('Nama Tamu')
+const guestName = ref('Ilham Ardiansyah')
 const isAnimating = ref(false)
 
 onMounted(() => {
