@@ -40,8 +40,8 @@
           & <strong>Ibu Hj. Siti Aminah</strong>
         </p>
         <div class="social-links">
-          <a href="https://instagram.com" target="_blank" class="instagram-link">
-            <i class="fa-brands fa-instagram"></i> @fulan_wedding
+          <a href="https://www.instagram.com/ilhamardians_/" target="_blank" class="instagram-link">
+            <i class="fa-brands fa-instagram"></i> @ilhamardians_
           </a>
         </div>
       </div>
@@ -64,8 +64,8 @@
           & <strong>Ibu Hj. Rahmawati</strong>
         </p>
         <div class="social-links">
-          <a href="https://instagram.com" target="_blank" class="instagram-link">
-            <i class="fa-brands fa-instagram"></i> @fulanah_wedding
+          <a href="https://www.instagram.com/rsiti_/" target="_blank" class="instagram-link">
+            <i class="fa-brands fa-instagram"></i> @rsiti_
           </a>
         </div>
       </div>

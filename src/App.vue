@@ -169,7 +169,7 @@ const toggleMusic = () => {
   <!-- Background Audio Player -->
   <audio 
     ref="audioPlayer" 
-    src="https://www.inspiration-for-success.com/music/shane-filan-beautiful-in-white.mp3"
+    src="/music/once-symponi.mp3"
     loop
   ></audio>
 </template>

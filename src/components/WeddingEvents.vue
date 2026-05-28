@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 // Target date: December 12, 2026, 09:00:00 (WIB / GMT+7)
-const weddingDate = new Date('2026-12-12T09:00:00+07:00').getTime()
+const weddingDate = new Date('2027-07-12T09:00:00+07:00').getTime()
 
 const days = ref('00')
 const hours = ref('00')
@@ -107,7 +107,7 @@ const googleCalendarLink = () => {
 
         <div class="event-info-item">
           <i class="fa-solid fa-calendar-days text-gold"></i>
-          <p>Sabtu, 12 Desember 2026</p>
+          <p>Sabtu, 12 Juli 2027</p>
         </div>
         <div class="event-info-item">
           <i class="fa-solid fa-clock text-gold"></i>
@@ -133,7 +133,7 @@ const googleCalendarLink = () => {
 
         <div class="event-info-item">
           <i class="fa-solid fa-calendar-days text-gold"></i>
-          <p>Sabtu, 12 Desember 2026</p>
+          <p>Sabtu, 12 Juli 2027</p>
         </div>
         <div class="event-info-item">
           <i class="fa-solid fa-clock text-gold"></i>

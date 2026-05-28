@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue'
 
 const emit = defineEmits(['open'])
 
-const guestName = ref('Ilham Ardiansyah')
+const guestName = ref('Template nama')
 const isAnimating = ref(false)
 
 onMounted(() => {
@@ -12,8 +12,6 @@ onMounted(() => {
   const toParam = params.get('to') || params.get('u')
   if (toParam) {
     guestName.value = decodeURIComponent(toParam)
-  } else {
-    guestName.value = 'Bapak/Ibu/Saudara/i'
   }
 })
 
