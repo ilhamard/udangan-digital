@@ -1,6 +1,13 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
+const props = defineProps({
+  guestName: {
+    type: String,
+    default: ''
+  }
+})
+
 const nameInput = ref('')
 const attendanceInput = ref('datang') // 'datang' or 'tidak_datang'
 const wishInput = ref('')
@@ -30,6 +37,10 @@ const seedWishes = [
 ]
 
 onMounted(() => {
+  if (props.guestName) {
+    nameInput.value = props.guestName
+  }
+
   const stored = localStorage.getItem('wedding_wishes')
   if (stored) {
     try {

@@ -7,11 +7,15 @@ import WeddingGallery from './components/WeddingGallery.vue'
 import WeddingEvents from './components/WeddingEvents.vue'
 import WeddingGift from './components/WeddingGift.vue'
 import WeddingRSVP from './components/WeddingRSVP.vue'
+import ShareGenerator from './components/ShareGenerator.vue'
 
 const isOpened = ref(false)
 const isPlaying = ref(false)
 const audioPlayer = ref(null)
 const screenContainer = ref(null)
+
+const guestName = ref('')
+const isAdmin = ref(false)
 
 // Falling petals configuration for desktop background decoration
 const petals = ref([])
@@ -33,6 +37,17 @@ const generatePetals = () => {
 
 onMounted(() => {
   generatePetals()
+  
+  // Parse query parameters
+  const params = new URLSearchParams(window.location.search)
+  const toParam = params.get('to') || params.get('u')
+  if (toParam) {
+    guestName.value = decodeURIComponent(toParam)
+  }
+  
+  if (params.get('admin') === 'true' || params.get('admin') === '1') {
+    isAdmin.value = true
+  }
 })
 
 const openInvitation = () => {
@@ -99,7 +114,7 @@ const toggleMusic = () => {
       :style="{ overflowY: isOpened ? 'auto' : 'hidden' }"
     >
       <!-- Cover overlay (Disappear when Buka Undangan clicked) -->
-      <WeddingCover v-if="!isOpened" @open="openInvitation" />
+      <WeddingCover v-if="!isOpened" :guest-name="guestName" @open="openInvitation" />
 
       <!-- Main Contents (Only scrolls/fully interacts after cover is open) -->
       <div v-show="isOpened" class="invitation-main-content">
@@ -154,7 +169,7 @@ const toggleMusic = () => {
           <div class="spacer-line"></div>
         </div>
 
-        <WeddingRSVP />
+        <WeddingRSVP :guest-name="guestName" />
 
         <!-- Footer credit -->
         <footer class="wedding-footer">
@@ -172,6 +187,9 @@ const toggleMusic = () => {
     src="/music/once-symponi.mp3"
     loop
   ></audio>
+
+  <!-- Share Generator for Admin (Only visible if ?admin=true is specified) -->
+  <ShareGenerator v-if="isAdmin" />
 </template>
 
 <style scoped>

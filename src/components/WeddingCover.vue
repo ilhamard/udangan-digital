@@ -1,18 +1,19 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed } from 'vue'
+
+const props = defineProps({
+  guestName: {
+    type: String,
+    default: ''
+  }
+})
 
 const emit = defineEmits(['open'])
 
-const guestName = ref('Template nama')
 const isAnimating = ref(false)
 
-onMounted(() => {
-  // Parse guest name from URL parameters, e.g., ?to=Budi+Santoso
-  const params = new URLSearchParams(window.location.search)
-  const toParam = params.get('to') || params.get('u')
-  if (toParam) {
-    guestName.value = decodeURIComponent(toParam)
-  }
+const displayGuestName = computed(() => {
+  return props.guestName || 'Tamu Undangan'
 })
 
 const handleOpen = () => {
@@ -47,7 +48,7 @@ const handleOpen = () => {
       <!-- Guest Card -->
       <div class="guest-card animate-fade-in-delayed-3">
         <p class="guest-label">Kepada Yth. Bapak/Ibu/Saudara/i</p>
-        <h3 class="guest-name">{{ guestName }}</h3>
+        <h3 class="guest-name">{{ displayGuestName }}</h3>
         <p class="guest-note">Kami Mengundang Anda Untuk Hadir di Pernikahan Kami</p>
       </div>
 
