@@ -16,24 +16,7 @@ const wishes = ref([])
 
 // Sample seed data to populate the guest board initially
 const seedWishes = [
-  {
-    name: 'Siti Rahma & Keluarga',
-    attendance: 'datang',
-    message: 'Selamat untuk Fulan dan Fulanah! Semoga pernikahan ini menjadi awal perjalanan yang penuh keberkahan, cinta, dan kebahagiaan yang langgeng. Aamiin YRA.',
-    timestamp: '2 jam yang lalu'
-  },
-  {
-    name: 'Budi Santoso (Sahabat Fulan)',
-    attendance: 'datang',
-    message: 'Selamat menempuh hidup baru bro! Akhirnya berlabuh juga di pelaminan. Semoga dilancarkan semua acaranya dan menjadi keluarga sakinah mawaddah warahmah!',
-    timestamp: '5 jam yang lalu'
-  },
-  {
-    name: 'Dewi Lestari',
-    attendance: 'tidak_datang',
-    message: 'Selamat berbahagia Fulanah dan suami. Mohon maaf belum bisa hadir secara langsung karena sedang bertugas di luar kota. Doa terbaik kami kirimkan dari jauh. Selamat!',
-    timestamp: '1 hari yang lalu'
-  }
+
 ]
 
 onMounted(() => {
