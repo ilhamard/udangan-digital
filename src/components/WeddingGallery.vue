@@ -2,10 +2,10 @@
 import { ref } from 'vue'
 
 const preweddingPhotos = ref([
-  { src: new URL('../assets/prewed-1.jpg', import.meta.url).href, title: 'Menatap Masa Depan' },
-  { src: new URL('../assets/prewed-2.jpg', import.meta.url).href, title: 'Kehangatan Kasih' },
-  { src: new URL('../assets/prewed-3.jpg', import.meta.url).href, title: 'Langkah Bersama' },
-  { src: new URL('../assets/prewed-4.jpg', import.meta.url).href, title: 'Janji Suci' }
+  { src: new URL('../assets/lucu1.jpeg', import.meta.url).href, title: 'Menatap Masa Depan' },
+  { src: new URL('../assets/lucu2.jpeg', import.meta.url).href, title: 'Kehangatan Kasih' },
+  { src: new URL('../assets/lucu4.jpeg', import.meta.url).href, title: 'Langkah Bersama' },
+  { src: new URL('../assets/lucu3.jpeg', import.meta.url).href, title: 'Janji Suci' }
 ])
 
 const activeIndex = ref(null)

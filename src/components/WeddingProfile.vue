@@ -31,7 +31,7 @@
       <div class="profile-card animate-fade-in-up">
         <div class="avatar-wrapper">
           <div class="gold-ring"></div>
-          <img src="../assets/fulan.jpg" alt="Fulan" class="avatar-img" />
+          <img src="../assets/ilham.png" alt="Fulan" class="avatar-img" />
         </div>
         <h2 class="cursive groom-name">Ilham Ardiansyah</h2>
         <p class="parent-info">
@@ -55,7 +55,7 @@
       <div class="profile-card animate-fade-in-up">
         <div class="avatar-wrapper">
           <div class="gold-ring"></div>
-          <img src="../assets/fulanah.jpg" alt="Fulanah" class="avatar-img" />
+          <img src="../assets/ana.png" alt="Fulanah" class="avatar-img" />
         </div>
         <h2 class="cursive bride-name">Siti Rokhana</h2>
         <p class="parent-info">
